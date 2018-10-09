@@ -1,0 +1,47 @@
+@import '../../styles/media';
+@import '../../styles/colors';
+
+.Header {
+  padding-top: 72px;
+  height: 500px;
+  background: @background-gradient;
+  display: grid;
+  color: @snowy;
+  text-align: center;
+
+  .welcome-title {
+    align-self: center;
+
+    h1 {
+      font-weight: 600;
+      font-size: 3.5em;
+      margin: 15px 0;
+    }
+    small {
+      font-size: 1.2em;
+      margin: 15px 0;
+      font-weight: 100;
+      display: block;
+    }
+  }
+  .welcome-button {
+    align-self: start;
+    font-family: @ff-roboto;
+
+    button {
+      font-weight: bold;
+      outline: none;
+      line-height: 40px;
+      width: 170px;
+      border: none;
+      color: @black;
+      font-size: 1.1em;
+      text-transform: uppercase;
+      border-radius: 3px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

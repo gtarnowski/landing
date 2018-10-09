@@ -1,0 +1,21 @@
+@import '../../styles/media';
+@import '../../styles/colors';
+
+.App {
+  display: grid;
+  font-family: @ff-source;
+
+  .container {
+    width: 100%;
+    display: grid;
+  }
+  .wrapper {
+    @media @smartphones {
+      width: 100%;
+    }
+    @media @desktops {
+      margin: 0 auto;
+      width: 1100px;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@import '../../styles/media';
+@import '../../styles/colors';
+
+.Navigation {
+  width: 100%;
+  height: 72px;
+  position: fixed;
+  background: transparent;
+  z-index: 2000;
+  color: @snowy;
+  display: grid;
+
+  .navigation-container {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    justify-content: center;
+    align-content: center;
+
+    .Logo {
+      align-self: center;
+      justify-self: start;
+      padding: 15px;
+
+      h2 {
+        font-size: 2em;
+        letter-spacing: 1px;
+        font-weight: 900;
+      }
+    }
+  }
+  &[data-fixed="true"] {
+    color: @black;
+    background-color: @snowy;
+    box-shadow: 0px -4px 15px #b1adad;
+
+    @media @smartphones {
+      .menu-item {
+        color: @black !important;
+      }
+    }
+  }
+}
+
+.NavigationMenu {
+  align-self: center;
+  justify-self: end;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+
+  .menu-item {
+    text-decoration: none;
+    color: @snowy;
+    padding: 15px;
+    font-weight: 100;
+    text-transform: uppercase;
+
+    &:hover,
+    &.active {
+      color: @gray-light;
+      font-weight:500;
+    }
+
+    @media @phones {
+      color: @gray-medium !important;
+      font-size: 2em;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      padding: 30px;
+
+      &:hover, &.active {
+        font-weight: 600;
+        color: @snowy !important;
+      }
+    }
+  }
+
+  @media @phones {
+    background: rgba(0, 0, 0, 0.97);
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+    grid-template-columns: unset;
+    grid-template-rows: repeat(4, max-content);
+    align-content: center;
+
+    &[data-open="true"] {
+      transform: translateX(0%);
+    }
+  }
+}

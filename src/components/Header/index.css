@@ -1,0 +1,40 @@
+.Header {
+  padding-top: 72px;
+  height: 500px;
+  background: linear-gradient(to right, #232526, #414345);
+  display: grid;
+  color: #ffffff;
+  text-align: center;
+}
+.Header .welcome-title {
+  align-self: center;
+}
+.Header .welcome-title h1 {
+  font-weight: 600;
+  font-size: 3.5em;
+  margin: 15px 0;
+}
+.Header .welcome-title small {
+  font-size: 1.2em;
+  margin: 15px 0;
+  font-weight: 100;
+  display: block;
+}
+.Header .welcome-button {
+  align-self: start;
+  font-family: "Roboto", sans-serif;
+}
+.Header .welcome-button button {
+  font-weight: bold;
+  outline: none;
+  line-height: 40px;
+  width: 170px;
+  border: none;
+  color: #000000;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+.Header .welcome-button button:hover {
+  cursor: pointer;
+}
