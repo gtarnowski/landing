@@ -1,0 +1,10 @@
+.Form .form-container {
+  margin: 0  auto;
+  display: block;
+  text-align: center;
+}
+.Form .form-row {
+  margin: 0  auto;
+  max-width: 300px;
+  padding: 5px 0;
+}
