@@ -15,7 +15,7 @@ const Rentals = () => (
         <OverlayBox
           boxClassName="RentalBox"
           key={name}
-          imageURL="https://blackrockdigital.github.io/startbootstrap-creative/img/portfolio/thumbnails/1.jpg"
+          imageURL="https://via.placeholder.com/300"
           imageAlt="alt"
           caption={`${name} for sale and rent`}
           captionHeader={name}

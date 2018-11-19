@@ -1,5 +1,19 @@
 .AboutUs {
-  height: 400px;
   background-color: #ffffff;
   border-bottom: 1px solid #eaebed;
+  padding-bottom: 20px;
+}
+.AboutUs .pictograms {
+  display: grid;
+  justify-content: center;
+}
+@media only screen and (min-width: 600px) {
+  .AboutUs .pictograms {
+    grid-template-columns: repeat(2, 250px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .AboutUs .pictograms {
+    grid-template-columns: repeat(4, 250px);
+  }
 }

@@ -65,7 +65,7 @@ class Navigation extends Component {
       <div className="Navigation" data-fixed={fixed}>
         <div className="navigation-container wrapper">
           <div className="Logo">
-            <h2>LOGOTYPE</h2>
+            <h2>{content.companyName}</h2>
           </div>
           <ul className="NavigationMenu" data-open={open}>
             {menuItems.map(({ name, url }) => (

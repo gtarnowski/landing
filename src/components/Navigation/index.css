@@ -1,12 +1,13 @@
 .Navigation {
   width: 100%;
-  height: 72px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   position: fixed;
   background: transparent;
   z-index: 2000;
   color: #ffffff;
   display: grid;
-  transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in;
 }
 .Navigation .navigation-container {
   display: grid;
@@ -15,6 +16,7 @@
   align-content: center;
 }
 .Navigation .navigation-container .Logo {
+  color: #17c671;
   align-self: center;
   justify-self: start;
   padding: 15px;
@@ -25,6 +27,8 @@
   font-weight: 900;
 }
 .Navigation[data-fixed="true"] {
+  padding-top: 0;
+  padding-bottom: 0;
   color: #000000;
   background-color: #ffffff;
   box-shadow: 0px -4px 15px #b1adad;
@@ -32,6 +36,12 @@
 @media only screen and (min-width: 600px) {
   .Navigation[data-fixed="true"] .menu-item {
     color: #000000 !important;
+  }
+  .Navigation[data-fixed="true"] .navigation-container h2 {
+    font-size: 1.5em;
+  }
+  .Navigation[data-fixed="true"] .NavigationMenu .menu-item {
+    font-size: 1em;
   }
 }
 .NavigationMenu {
@@ -41,7 +51,7 @@
   grid-template-columns: repeat(4, max-content);
 }
 .NavigationMenu .menu-item {
-  font-size: 1.1em;
+  font-size: 1.5em;
   text-decoration: none;
   color: #ffffff;
   padding: 15px;

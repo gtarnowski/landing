@@ -1,16 +1,36 @@
 .Form {
   display: grid;
-  justify-content: center;
+  margin: 10px;
 }
 .Form .form-container {
   display: grid;
-  grid-template-columns: repeat(2, 300px);
-  grid-gap: 15px;
+  justify-items: stretch;
+  grid-column-gap: 15px;
+}
+.Form .form-container article {
+  justify-self: stretch;
+}
+.Form .form-container aside {
+  justify-self: stretch;
+}
+@media only screen and (min-width: 600px) {
+  .Form .form-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .Form .form-container {
+    grid-template-columns: repeat(2, 315px);
+  }
 }
 .Form .form-row {
-  margin: 0  auto;
-  max-width: 300px;
+  margin: 0;
   padding: 5px 0;
+}
+@media only screen and (min-width: 768px) {
+  .Form {
+    justify-content: center;
+  }
 }
 .Button {
   background-color: #18c671;

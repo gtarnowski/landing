@@ -1,5 +1,39 @@
 .Contact {
   background-color: #ffffff;
-  padding: 3em;
   text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .Contact {
+    padding: 3em;
+  }
+}
+.ContactIcons {
+  display: grid;
+  justify-content: center;
+  margin: 30px;
+  padding: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .ContactIcons {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+.ContactIcons .contact-tile {
+  padding: 20px;
+  grid-row-gap: 15px;
+  display: grid;
+  justify-content: center;
+}
+.ContactIcons .contact-tile .icon {
+  color: #17c671;
+  font-size: 2em;
+}
+.ContactIcons .contact-tile h6 {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+.ContactIcons .contact-tile:hover {
+  background-color: #f4f4f4;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }

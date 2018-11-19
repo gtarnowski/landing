@@ -3,6 +3,48 @@
 
 .Contact {
   background-color: @snowy;
-  padding: 3em;
+
   text-align: center;
+
+  @media @tablets {
+    padding: 3em;
+  }
+}
+
+.ContactIcons {
+  display: grid;
+  justify-content: center;
+  margin: 30px;
+  padding: 10px;
+
+
+
+  @media @tablets {
+    grid-template-columns: repeat(3, 200px);
+  }
+
+  .contact-tile {
+    padding: 20px;
+    grid-row-gap: 15px;
+    display: grid;
+    justify-content: center;
+
+
+    .icon {
+      color: @primary;
+      font-size: 2em;
+    }
+
+    h6 {
+      font-size: 1.2em;
+      font-weight: 300;
+    }
+
+    &:hover {
+      background-color: @lighter-gray;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
+
+  }
 }

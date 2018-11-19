@@ -27,16 +27,9 @@
   font-family: "Roboto", sans-serif;
 }
 .Header .welcome-button button {
-  font-weight: bold;
-  outline: none;
-  line-height: 40px;
-  width: 170px;
-  border: none;
-  color: #000000;
-  font-size: 1.1em;
   text-transform: uppercase;
-  border-radius: 3px;
-}
-.Header .welcome-button button:hover {
-  cursor: pointer;
+  width: 200px;
+  height: 60px;
+  font-size: 1.2em;
+  font-weight: 600;
 }

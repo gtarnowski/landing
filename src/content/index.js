@@ -5,6 +5,12 @@ import Contact from '../components/Contact';
 
 export default {
   companyName: 'Tankmor',
+  companyDescription: 'Some description about company',
+  companyDetails: {
+    email: 'email@example.com',
+    address: '4 julius avenue, Sydney',
+    phone: '+410000000',
+  },
   menuItems: [
     {
       name: 'Home',

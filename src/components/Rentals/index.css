@@ -5,7 +5,7 @@
 }
 .Rentals .item-container {
   display: grid;
-  grid-template-columns: repeat(4, 400px);
+  grid-template-columns: repeat(1, 1fr);
   justify-content: center;
 }
 .Rentals .item-container .rental-item {
@@ -15,4 +15,19 @@
   height: 100px;
   margin: 20px;
   background: #ffffff;
+}
+@media only screen and (min-width: 600px) {
+  .Rentals .item-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .Rentals .item-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .Rentals .item-container {
+    grid-template-columns: repeat(3, 500px);
+  }
 }

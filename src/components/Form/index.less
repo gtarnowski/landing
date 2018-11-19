@@ -3,29 +3,38 @@
 
 .Form {
   display: grid;
-  justify-content: center;
+  margin: 10px;
 
   .form-container {
     display: grid;
-    grid-template-columns: repeat(2, 300px);
-    grid-gap: 15px;
+    justify-items: stretch;
+    grid-column-gap: 15px;
 
     article {
-
+      justify-self: stretch;
     }
 
     aside {
-
+      justify-self: stretch;
     }
+
+    @media @smartphones {
+      grid-template-columns: 1fr;
+    }
+    @media @tablets {
+      grid-template-columns: repeat(2, 315px);
+    }
+
   }
 
   .form-row {
-    margin: 0  auto;
-    max-width: 300px;
+    margin: 0;
     padding: 5px 0;
   }
 
-
+  @media @tablets {
+    justify-content: center;
+  }
 }
 
 .Button {

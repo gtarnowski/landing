@@ -2,7 +2,20 @@
 @import '../../styles/colors';
 
 .AboutUs {
-  height: 400px;
   background-color: @snowy;
   border-bottom: 1px solid #eaebed;
+  padding-bottom: 20px;
+
+  .pictograms {
+    display: grid;
+    justify-content: center;
+
+    @media @smartphones {
+      grid-template-columns: repeat(2, 250px);
+    }
+
+    @media @desktops {
+      grid-template-columns: repeat(4, 250px);
+    }
+  }
 }

@@ -1,14 +1,15 @@
 import React from 'react';
 import './index.css';
+import content from '../../content/index'
 
 const Header = () => (
   <div className="Header container">
     <div className="welcome-title wrapper">
-      <h1>Company Name</h1>
-      <small>Some description about company</small>
+      <h1>{content.companyName}</h1>
+      <small>{content.companyDescription}</small>
     </div>
     <div className="welcome-button wrapper">
-      <button>See Details</button>
+      <button className="Button">See Details</button>
     </div>
   </div>
 );
