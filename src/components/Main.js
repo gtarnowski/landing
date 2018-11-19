@@ -1,8 +1,8 @@
 import React from 'react';
 import SectionProvider from './SectionProvider';
-import menuComponents from './sections';
+import content from '../content/index';
 
-const Main = () => menuComponents.map(menuComponent => (
+const Main = () => content.menuItems.map(menuComponent => (
   <SectionProvider {...menuComponent} key={menuComponent.name} />
 ));
 

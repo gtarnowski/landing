@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 import ToggleMenu from '../ToggleMenu';
 import BottomArrow from '../BottomArrow';
 
-import menuItems from '../sections';
+import content from '../../content/index';
 import './index.css';
 
 
@@ -58,7 +58,9 @@ class Navigation extends Component {
   toggleButtonNode = React.createRef();
 
   render() {
+    const { location: { hash } } = this.props;
     const { fixed, open } = this.state;
+    const { menuItems } = content
     return (
       <div className="Navigation" data-fixed={fixed}>
         <div className="navigation-container wrapper">
@@ -67,7 +69,7 @@ class Navigation extends Component {
           </div>
           <ul className="NavigationMenu" data-open={open}>
             {menuItems.map(({ name, url }) => (
-              <Link to={`#${url}`} smooth className={this.isLinkActive(url)} key={name}>
+              <Link to={`#${url}`} smooth className={`menu-item ${hash.match(url) && 'active'}`} key={name}>
                 <li>{name}</li>
               </Link>
             ))}

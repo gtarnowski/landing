@@ -6,6 +6,7 @@
   z-index: 2000;
   color: #ffffff;
   display: grid;
+  transition: 0.2s ease-in-out;
 }
 .Navigation .navigation-container {
   display: grid;
@@ -44,13 +45,11 @@
   text-decoration: none;
   color: #ffffff;
   padding: 15px;
-  font-weight: 100;
+  font-weight: 800;
   text-transform: uppercase;
 }
-.NavigationMenu .menu-item:hover,
 .NavigationMenu .menu-item.active {
-  color: #f9f9fb;
-  font-weight: 500;
+  color: #17c671 !important;
 }
 @media only screen and (max-width: 599px) {
   .NavigationMenu .menu-item {
@@ -62,7 +61,7 @@
   }
   .NavigationMenu .menu-item:hover,
   .NavigationMenu .menu-item.active {
-    font-weight: 600;
+    font-weight: 900;
     color: #ffffff !important;
   }
 }

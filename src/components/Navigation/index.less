@@ -9,6 +9,7 @@
   z-index: 2000;
   color: @snowy;
   display: grid;
+  transition: 0.2s ease-in-out;
 
   .navigation-container {
     display: grid;
@@ -52,13 +53,11 @@
     text-decoration: none;
     color: @snowy;
     padding: 15px;
-    font-weight: 100;
+    font-weight: 800;
     text-transform: uppercase;
 
-    &:hover,
     &.active {
-      color: @gray-light;
-      font-weight:500;
+      color: @primary !important;
     }
 
     @media @phones {
@@ -69,7 +68,7 @@
       padding: 30px;
 
       &:hover, &.active {
-        font-weight: 600;
+        font-weight: 900;
         color: @snowy !important;
       }
     }

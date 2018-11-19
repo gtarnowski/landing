@@ -1,13 +1,14 @@
 .Header {
   padding-top: 72px;
-  height: 500px;
+  height: 700px;
   background: linear-gradient(to right, #232526, #414345);
   display: grid;
   color: #ffffff;
   text-align: center;
 }
 .Header .welcome-title {
-  align-self: center;
+  align-self: end;
+  padding-bottom: 50px;
 }
 .Header .welcome-title h1 {
   font-weight: 900;
