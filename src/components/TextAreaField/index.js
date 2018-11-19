@@ -2,16 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 
-const TextAreaField = ({ name, cols, rows, defaultValue }) => {
+const TextAreaField = ({
+  name, cols, rows, defaultValue,
+}) => {
   const fieldName = name.toLowerCase();
   return (
     <div className="TextAreaField">
-      <textarea rows={rows} cols={cols} id={fieldName}>
-        {defaultValue}
-      </textarea>
-      <label htmlFor={fieldName}>
-        {name}
-      </label>
+      <textarea rows={rows} cols={cols} id={fieldName} placeholder={name} defaultValue={defaultValue} />
     </div>
   );
 };

@@ -2,17 +2,52 @@
 @import '../../styles/colors';
 
 .Form {
+  display: grid;
+  justify-content: center;
 
   .form-container {
-    margin:  0  auto;
-    display: block;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-gap: 15px;
+
+    article {
+
+    }
+
+    aside {
+
+    }
   }
 
   .form-row {
     margin: 0  auto;
     max-width: 300px;
     padding: 5px 0;
+  }
+
+
+}
+
+.Button {
+  background-color: #18c671;
+  color: @snowy;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  margin-right: 4px;
+  height: 45px;
+  min-width: 24px;
+  text-shadow: none;
+  padding: 4px 10px;
+  line-height: 1.57142857em;
+
+  &.block {
+    width: 100%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #0ea25a;
   }
 }
 

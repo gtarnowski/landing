@@ -7,39 +7,43 @@ const NAME = 'Name';
 const LAST_NAME = 'Last Name';
 const EMAIL = 'Email';
 const MESSAGE = 'Message';
-const DEFAULT_TEXTAREA_VALUE = 'Proszę o kontakt';
+const DEFAULT_TEXTAREA_VALUE = 'Please contact with me';
 
 class Form extends Component {
   render() {
     return (
       <div className="Form">
         <form className="form-container">
-          <div className="form-row">
-            <TextField
-              name={NAME}
-            />
-          </div>
-          <div className="form-row">
-            <TextField
-              name={LAST_NAME}
-            />
-          </div>
-          <div className="form-row">
-            <TextField
-              name={EMAIL}
-              type="email"
-            />
-          </div>
-          <div className="form-row">
-            <TextAreaField
-              defaultValue={DEFAULT_TEXTAREA_VALUE}
-              name={MESSAGE}
-              textArea={{
-                cols: 30,
-                rows: 7,
-              }}
-            />
-          </div>
+          <article>
+            <div className="form-row">
+              <TextField
+                name={NAME}
+              />
+            </div>
+            <div className="form-row">
+              <TextField
+                name={LAST_NAME}
+              />
+            </div>
+            <div className="form-row">
+              <TextField
+                name={EMAIL}
+                type="email"
+              />
+            </div>
+          </article>
+          <aside>
+            <div className="form-row">
+              <TextAreaField
+                name={MESSAGE}
+                rows={8}
+                cols={30}
+              />
+            </div>
+            <div className="form-row">
+              <button className="Button block">Send Now</button>
+            </div>
+          </aside>
         </form>
       </div>
     );

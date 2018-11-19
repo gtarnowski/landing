@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
+import { withRouter } from 'react-router-dom';
+
 import ToggleMenu from '../ToggleMenu';
 import BottomArrow from '../BottomArrow';
+
+import menuItems from '../sections';
 import './index.css';
+
 
 class Navigation extends Component {
   state = {
@@ -40,10 +46,19 @@ class Navigation extends Component {
 
   onToggleMenu = () => window.addEventListener('click', this.onOpen);
 
+  isLinkActive = url => {
+    const { location: { hash } } = this.props;
+    if ((!hash && url === 'home') || hash.match(url)) {
+      return 'menu-item active';
+    }
+
+    return 'menu-item';
+  };
+
   toggleButtonNode = React.createRef();
 
   render() {
-    const { fixed, open } = this.state
+    const { fixed, open } = this.state;
     return (
       <div className="Navigation" data-fixed={fixed}>
         <div className="navigation-container wrapper">
@@ -51,18 +66,11 @@ class Navigation extends Component {
             <h2>LOGOTYPE</h2>
           </div>
           <ul className="NavigationMenu" data-open={open}>
-            <a href="#" className="menu-item active">
-              <li>Products</li>
-            </a>
-            <a href="#" className="menu-item">
-              <li>Services</li>
-            </a>
-            <a href="#" className="menu-item">
-              <li>About</li>
-            </a>
-            <a href="#" className="menu-item">
-              <li>Contact</li>
-            </a>
+            {menuItems.map(({ name, url }) => (
+              <Link to={`#${url}`} smooth className={this.isLinkActive(url)} key={name}>
+                <li>{name}</li>
+              </Link>
+            ))}
           </ul>
           <ToggleMenu
             fixed={fixed}
@@ -77,4 +85,4 @@ class Navigation extends Component {
   }
 }
 
-export default Navigation;
+export default withRouter(Navigation);

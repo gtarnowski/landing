@@ -1,22 +1,23 @@
 import React from 'react';
-import About from '../About';
-import BottomArrow from '../BottomArrow';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+// Components
 import Footer from '../Footer';
-import Header from '../Header';
 import Navigation from '../Navigation';
-import Products from '../Products';
-import Services from '../Services';
+
 import './index.css';
+import Main from '../Main';
 
 const App = () => (
-  <div className="App">
-    <Navigation />
-    <Header />
-    <Services />
-    <Products />
-    <About />
-    <Footer />
-  </div>
+  <Router>
+    <div className="App">
+      <Navigation />
+      <Switch>
+        <Route path="/" component={Main} />
+      </Switch>
+      <Footer />
+    </div>
+  </Router>
 );
 
 export default App;

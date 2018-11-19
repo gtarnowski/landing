@@ -1,0 +1,21 @@
+@import '../../styles/media';
+@import '../../styles/colors';
+
+.Title {
+  position: relative;
+  text-align: center !important;
+  margin: 0 3em 2em 3em !important;
+  padding-top: 1.5em;
+  font-size: 1.95em;
+
+  &:after {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background: #17c671;
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+    bottom: -20px;
+  }
+}

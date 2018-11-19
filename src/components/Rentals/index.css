@@ -1,0 +1,18 @@
+.Rentals {
+  height: 500px;
+  background-color: #f9f9fb;
+  border-bottom: 1px solid #eaebed;
+}
+.Rentals .item-container {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  justify-content: center;
+}
+.Rentals .item-container .rental-item {
+  box-shadow: 0px 3px 43px 1px rgba(128, 128, 128, 0.2);
+  text-align: center;
+  padding: 20px;
+  height: 100px;
+  margin: 20px;
+  background: #ffffff;
+}
