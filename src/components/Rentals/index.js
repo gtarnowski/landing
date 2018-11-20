@@ -7,8 +7,8 @@ import './index.css';
 const rentalItems = ['Item', 'Item2', 'Item3', 'Item4'];
 // const rentalItems = ['Item'];
 
-const Rentals = () => (
-  <div className="Rentals">
+const Rentals = ({ name }) => (
+  <div className={name}>
     <Title title="Rentals" />
     <div className="item-container">
       {content.categoryTiles.map(({ name }) => (

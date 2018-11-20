@@ -22,6 +22,14 @@
   font-weight: 100;
   display: block;
 }
+@media only screen and (max-width: 599px) {
+  .Header .welcome-title h1 {
+    font-size: 3em;
+  }
+  .Header .welcome-title small {
+    font-size: 1em;
+  }
+}
 .Header .welcome-button {
   align-self: start;
   font-family: "Roboto", sans-serif;

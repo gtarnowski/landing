@@ -1,39 +1,32 @@
 .Form {
   display: grid;
-  margin: 10px;
-}
-.Form .form-container {
-  display: grid;
-  justify-items: stretch;
-  grid-column-gap: 15px;
-}
-.Form .form-container article {
-  justify-self: stretch;
-}
-.Form .form-container aside {
-  justify-self: stretch;
-}
-@media only screen and (min-width: 600px) {
-  .Form .form-container {
-    grid-template-columns: 1fr;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .Form .form-container {
-    grid-template-columns: repeat(2, 315px);
-  }
+  margin: 10px auto;
+  padding: 30px;
+  box-shadow: 0 3px 20px 0 rgba(128, 128, 128, 0.2);
 }
 .Form .form-row {
   margin: 0;
   padding: 5px 0;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 599px) {
   .Form {
-    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .Form {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .Form {
+    width: 100%;
+    max-width: 320px;
   }
 }
 .Button {
-  background-color: #18c671;
+  background-color: #17c671;
   color: #ffffff;
   border: none;
   outline: none;

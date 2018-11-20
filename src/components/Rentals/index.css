@@ -1,7 +1,7 @@
 .Rentals {
   background-color: #f9f9fb;
   border-bottom: 1px solid #eaebed;
-  padding-bottom: 20px;
+  padding: 3em 0;
 }
 .Rentals .item-container {
   display: grid;

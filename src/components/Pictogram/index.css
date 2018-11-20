@@ -2,6 +2,9 @@
   display: grid;
   grid-row-gap: 1em;
   justify-items: center;
+  margin-bottom: 3em;
+  padding: 2em;
+  transition: 0.2s ease-in;
 }
 .Pictogram .icon {
   font-size: 4em;
@@ -14,4 +17,8 @@
 .Pictogram small {
   font-size: 1.2em;
   color: #80868f;
+}
+.Pictogram:hover {
+  cursor: pointer;
+  background-color: #f4f4f4;
 }

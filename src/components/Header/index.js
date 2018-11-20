@@ -1,6 +1,6 @@
 import React from 'react';
-import './index.css';
 import content from '../../content/index'
+import './index.css';
 
 const Header = () => (
   <div className="Header container">

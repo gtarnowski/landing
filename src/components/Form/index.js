@@ -14,36 +14,32 @@ class Form extends Component {
     return (
       <div className="Form">
         <form className="form-container">
-          <article>
-            <div className="form-row">
-              <TextField
-                name={NAME}
-              />
-            </div>
-            <div className="form-row">
-              <TextField
-                name={LAST_NAME}
-              />
-            </div>
-            <div className="form-row">
-              <TextField
-                name={EMAIL}
-                type="email"
-              />
-            </div>
-          </article>
-          <aside>
-            <div className="form-row">
-              <TextAreaField
-                name={MESSAGE}
-                rows={8}
-                cols={30}
-              />
-            </div>
-            <div className="form-row">
-              <button className="Button block">Send Now</button>
-            </div>
-          </aside>
+          <div className="form-row">
+            <TextField
+              name={NAME}
+            />
+          </div>
+          <div className="form-row">
+            <TextField
+              name={LAST_NAME}
+            />
+          </div>
+          <div className="form-row">
+            <TextField
+              name={EMAIL}
+              type="email"
+            />
+          </div>
+          <div className="form-row">
+            <TextAreaField
+              name={MESSAGE}
+              rows={3}
+              cols={30}
+            />
+          </div>
+          <div className="form-row">
+            <button className="Button block">Send Now</button>
+          </div>
         </form>
       </div>
     );

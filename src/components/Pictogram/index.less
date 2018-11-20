@@ -5,6 +5,9 @@
   display: grid;
   grid-row-gap: 1em;
   justify-items: center;
+  margin-bottom: 3em;
+  padding: 2em;
+  transition: 0.2s ease-in;
 
   .icon {
     font-size: 4em;
@@ -18,5 +21,10 @@
   small {
     font-size: 1.2em;
     color: @gray-dark;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: @lighter-gray;
   }
 }

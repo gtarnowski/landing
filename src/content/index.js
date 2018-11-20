@@ -7,14 +7,21 @@ export default {
   companyName: 'Tankmor',
   companyDescription: 'Some description about company',
   companyDetails: {
-    email: 'email@example.com',
-    address: '4 julius avenue, Sydney',
-    phone: '+410000000',
+    email: 'rentals@tankmor.com',
+    address: '531 Sheldon Rd, Channelview, TX 77530',
+    fullAddress: {
+      zip: '77530',
+      state: 'TX',
+      street: '531 Sheldon Rd',
+      city: 'Channelview',
+    },
+    phone: '+1 (832) 900 4246',
   },
   menuItems: [
     {
       name: 'Home',
       url: 'home',
+      className: 'Header',
       component: Header,
     },
     {
@@ -50,5 +57,4 @@ export default {
       name: 'Non Code Trailers',
     },
   ],
-
 };

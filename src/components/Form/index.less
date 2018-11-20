@@ -3,42 +3,32 @@
 
 .Form {
   display: grid;
-  margin: 10px;
-
-  .form-container {
-    display: grid;
-    justify-items: stretch;
-    grid-column-gap: 15px;
-
-    article {
-      justify-self: stretch;
-    }
-
-    aside {
-      justify-self: stretch;
-    }
-
-    @media @smartphones {
-      grid-template-columns: 1fr;
-    }
-    @media @tablets {
-      grid-template-columns: repeat(2, 315px);
-    }
-
-  }
+  margin: 10px auto;
+  padding: 30px;
+  box-shadow: @deep-fog;
 
   .form-row {
     margin: 0;
     padding: 5px 0;
   }
 
-  @media @tablets {
-    justify-content: center;
+  @media @phones {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  @media @smartphones {
+    width: 300px;
+  }
+
+  @media @desktops {
+    width: 100%;
+    max-width: 320px;
   }
 }
 
 .Button {
-  background-color: #18c671;
+  background-color: @primary;
   color: @snowy;
   border: none;
   outline: none;

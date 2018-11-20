@@ -44,6 +44,16 @@
     font-size: 1em;
   }
 }
+@media only screen and (max-width: 599px) {
+  .Navigation {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .Navigation .navigation-container {
+    justify-content: space-between;
+    grid-template-columns: repeat(2, min-content);
+  }
+}
 .NavigationMenu {
   align-self: center;
   justify-self: end;

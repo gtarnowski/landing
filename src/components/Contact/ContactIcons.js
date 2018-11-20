@@ -7,8 +7,8 @@ import faEnvelope from '@fortawesome/fontawesome-free-solid/faEnvelope';
 import faPhone from '@fortawesome/fontawesome-free-solid/faPhone';
 import './index.css';
 
-const ContactIcons = ({ phone, address, email }) => (
-  <div className="ContactIcons">
+const ContactIcons = ({ phone, address, email, horizontal }) => (
+  <div className="ContactIcons" data-horizontal={horizontal}>
     {phone && (
       <div className="contact-tile">
         <div className="icon">
@@ -37,6 +37,7 @@ const ContactIcons = ({ phone, address, email }) => (
 );
 
 ContactIcons.propTypes = {
+  horizontal: PropTypes.bool,
   phone: PropTypes.string,
   address: PropTypes.string,
   email: PropTypes.string,

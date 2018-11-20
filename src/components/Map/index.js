@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.css'
+import mapImage from '../../content/map.png';
 
 const map = {
   key: 'AIzaSyCbCsd4Bqu-0_xhhIeZzmY9j9IfNDqT3Cs',
@@ -22,7 +23,7 @@ class Map extends Component {
   render() {
     return (
       <div className="Map">
-        <img src={mapUrl} alt="Google Maps Localisation" />
+        <img src={mapImage} alt="Google Maps Localisation" />
       </div>
     );
   }
