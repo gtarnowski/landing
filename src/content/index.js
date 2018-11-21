@@ -2,6 +2,29 @@ import Header from '../components/Header';
 import AboutUs from '../components/AboutUs';
 import Rentals from '../components/Rentals';
 import Contact from '../components/Contact';
+import { FuelTrailersContent } from './categoryContent'
+export const categories = [
+  {
+    name: 'Chemical Trailers',
+    url: '/rentals/chemical-trailers/',
+  },
+  { name: 'Food Grade Trailers',
+    url: '/rentals/food-grade-trailers/',
+
+  },
+  {
+    name: 'Industrial Gas Trailers',
+    url: '/rentals/industrial-gas-trailers/',
+  },
+  {
+    name: 'Gasoline Trailers',
+    url: '/rentals/gasoline-trailers/',
+  },
+  {
+    name: 'Non Code Trailers',
+    url: '/rentals/non-code-trailers/',
+  },
+];
 
 export default {
   companyName: 'Tankmor',
@@ -34,13 +57,7 @@ export default {
       name: 'Rentals',
       url: 'rentals',
       component: Rentals,
-      children: [
-        { name: 'Chemical Trailers', url: '/rentals/chemical-trailers/' },
-        { name: 'Food Grade Trailers', url: '/rentals/food-grade-trailers/' },
-        { name: 'Industrial Gas Trailers', url: '/rentals/industrial-gas-trailers/' },
-        { name: 'Gasoline Trailers', url: '/rentals/gasoline-trailers/' },
-        { name: 'Non Code Trailers', url: '/rentals/non-code-trailers/' },
-      ],
+      children: categories,
     },
     {
       name: 'Contact',
@@ -48,21 +65,5 @@ export default {
       component: Contact,
     },
   ],
-  categoryTiles: [
-    {
-      name: 'Chemical Trailers',
-    },
-    {
-      name: 'Gasoline Trailers',
-    },
-    {
-      name: 'Industrial Gas Trailers',
-    },
-    {
-      name: 'Food Grade Trailers',
-    },
-    {
-      name: 'Non Code Trailers',
-    },
-  ],
+  categoryTiles: categories.map(({ name }) => ({ name })),
 };

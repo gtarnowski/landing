@@ -15,7 +15,8 @@
   padding: 10px;
   font-weight: 500;
 }
-.DropDownMenu a:hover {
+.DropDownMenu a:hover,
+.DropDownMenu a.active {
   color: #17c671;
   background-color: rgba(23, 198, 113, 0.12);
 }

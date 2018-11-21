@@ -1,0 +1,26 @@
+.RentalCategories {
+  background-color: #f7f7f7;
+  margin-top: 50px;
+}
+@media only screen and (max-width: 599px) {
+  .RentalCategories {
+    padding: 2em;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .RentalCategories {
+    padding: 2em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .RentalCategories {
+    padding: 3em;
+  }
+}
+.RentalCategories .title {
+  text-align: center;
+}
+.RentalCategories .title h2 {
+  font-size: 1.3em;
+  color: #80868f;
+}

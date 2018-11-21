@@ -2,7 +2,8 @@
   position: relative;
   text-align: center !important;
   margin: 0 0 2em 0 !important;
-  font-size: 1.95em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 .Title:after {
   content: '';
@@ -13,4 +14,19 @@
   left: 50%;
   margin-left: -15px;
   bottom: -20px;
+}
+@media only screen and (max-width: 599px) {
+  .Title {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .Title {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .Title {
+    font-size: 1.95em;
+  }
 }

@@ -1,6 +1,30 @@
 @import '../../styles/media';
 @import '../../styles/colors';
 
-.RentalCategories {
+@sub-page: #f7f7f7;
 
+.RentalCategories {
+  background-color: @sub-page;
+  margin-top: 50px;
+
+  @media @phones {
+    padding: 2em;
+  }
+
+  @media @smartphones {
+    padding: 2em;
+  }
+
+  @media @desktops {
+    padding: 3em;
+  }
+
+  .title {
+    text-align: center;
+
+    h2 {
+      font-size: 1.3em;
+      color: @gray-dark;
+    }
+  }
 }

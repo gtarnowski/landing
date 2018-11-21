@@ -24,3 +24,6 @@ body,
     width: 1100px;
   }
 }
+.App[data-sub-page="true"] {
+  grid-template-rows: 1fr min-content;
+}

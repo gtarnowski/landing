@@ -49,7 +49,8 @@ class App extends Component {
     Boolean((compareNumber - start) * (compareNumber - end) <= 0);
 
   scrollEvent = debounce(() => {
-    const scrollPosition = parseInt(window.pageYOffset, 10) + this.scrollOffset;
+    if (!Boolean(this.props.location.pathname === '/')) return null
+    const scrollPosition = (parseInt(window.pageYOffset, 10) + this.scrollOffset);
     this.getComponentPositions().forEach(({ start, end, name }) => {
       if (this.isBetween(scrollPosition, start, end)) {
         if (this.state.activeSection !== name) {
@@ -61,13 +62,13 @@ class App extends Component {
 
   render() {
     const { location: { pathname } } = this.props;
-    const isHomePage = Boolean(pathname === '/');
+    const isSubPage = Boolean(pathname !== '/');
     return (
-      <div className="App" data-home={isHomePage}>
-        <Navigation activeSection={this.state.activeSection} data-navigation-home={isHomePage} />
+      <div className="App" data-sub-page={isSubPage}>
+        <Navigation activeSection={this.state.activeSection} isSubPage={isSubPage} />
         <Switch>
           <Route path="/" exact component={Main} />
-          <Route path="/rentals" exact component={RentalCategories} />
+          <Route path="/rentals" component={RentalCategories} />
         </Switch>
         <Footer />
       </div>

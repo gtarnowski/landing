@@ -5,8 +5,8 @@
   position: relative;
   text-align: center !important;
   margin: 0 0 2em 0 !important;
-
-  font-size: 1.95em;
+  font-family: @ff-mont;
+  font-weight: 300;
 
   &:after {
     content: '';
@@ -17,5 +17,15 @@
     left: 50%;
     margin-left: -15px;
     bottom: -20px;
+  }
+
+  @media @phones {
+    font-size: 1.5em;
+  }
+  @media @smartphones {
+    font-size: 1.5em;
+  }
+  @media @desktops {
+    font-size: 1.95em;
   }
 }
