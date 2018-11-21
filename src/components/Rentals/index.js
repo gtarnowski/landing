@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import Title from '../Title';
 import content from '../../content/index'
 import OverlayBox from '../OverlayBox';
@@ -22,6 +23,10 @@ const Rentals = ({ name }) => (
         />
       ))}
     </div>
+
+    <Link to="/rentals" className="Button">
+      View all
+    </Link>
   </div>
 );
 

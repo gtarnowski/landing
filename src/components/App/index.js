@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { withRouter, Switch, Route } from 'react-router-dom';
+import debounce from 'lodash/debounce';
 
 // Components
 import Footer from '../Footer';
 import Navigation from '../Navigation';
-
-import './index.css';
+import RentalCategories from '../RentalCategories';
 import Main from '../Main';
+
 import content from '../../content';
-import debounce from 'lodash/debounce';
+import './index.css';
 
 class App extends Component {
   constructor() {
@@ -23,16 +25,19 @@ class App extends Component {
 
   componentWillMount() {
     window.addEventListener('scroll', this.scrollEvent);
-
   }
 
   componentDidMount() {
-    this.componentPositions = this.getComponentPositions()
+    this.componentPositions = this.getComponentPositions();
     this.forceUpdate();
   }
 
   getComponentPositions = () => this.componentsList.map(name => {
-    const offsetTop = document.getElementById(name).offsetTop;
+    const element = document.getElementById(name);
+
+    if (!element) return null;
+
+    const offsetTop = element.offsetTop;
     return {
       name,
       start: Number(offsetTop),
@@ -55,18 +60,23 @@ class App extends Component {
   }, 10);
 
   render() {
+    const { location: { pathname } } = this.props;
+    const isHomePage = Boolean(pathname === '/');
     return (
-      <Router>
-        <div className="App">
-          <Navigation activeSection={this.state.activeSection} />
-          <Switch>
-            <Route path="/" component={Main} />
-          </Switch>
-          <Footer />
-        </div>
-      </Router>
+      <div className="App" data-home={isHomePage}>
+        <Navigation activeSection={this.state.activeSection} data-navigation-home={isHomePage} />
+        <Switch>
+          <Route path="/" exact component={Main} />
+          <Route path="/rentals" exact component={RentalCategories} />
+        </Switch>
+        <Footer />
+      </div>
     );
   }
 }
 
-export default App;
+App.propTypes = {
+  location: PropTypes.object,
+};
+
+export default withRouter(App);

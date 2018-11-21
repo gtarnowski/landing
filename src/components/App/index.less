@@ -1,9 +1,14 @@
 @import '../../styles/media';
 @import '../../styles/colors';
 
+html, body, #root, .App {
+  height: 100%;
+}
+
 .App {
   display: grid;
   font-family: @ff-source;
+  align-content: stretch;
 
   .container {
     width: 100%;

@@ -1,0 +1,21 @@
+.DropDownMenu {
+  display: grid;
+  background-color: #313334;
+  padding: 10px;
+  position: absolute;
+  margin-top: 15px;
+  visibility: hidden;
+  margin-left: -30px !important;
+}
+.DropDownMenu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: none;
+  padding: 10px;
+  font-weight: 500;
+}
+.DropDownMenu a:hover {
+  color: #17c671;
+  background-color: rgba(23, 198, 113, 0.12);
+}

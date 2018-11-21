@@ -68,8 +68,12 @@
   font-weight: 800;
   text-transform: uppercase;
 }
-.NavigationMenu .menu-item.active {
+.NavigationMenu .menu-item.active,
+.NavigationMenu .menu-item:hover {
   color: #17c671 !important;
+}
+.NavigationMenu .menu-item.menu-drop-down:hover .DropDownMenu {
+  visibility: visible;
 }
 @media only screen and (max-width: 599px) {
   .NavigationMenu .menu-item {

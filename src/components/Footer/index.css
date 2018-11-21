@@ -3,6 +3,7 @@
   height: 15px;
   background-color: #212529;
   color: #ffffff;
+  align-self: end;
 }
 .Footer .content {
   font-size: 1.1em;

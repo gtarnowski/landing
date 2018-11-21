@@ -12,6 +12,7 @@
   display: grid;
   transition: 0.2s ease-in;
 
+
   .navigation-container {
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -82,8 +83,16 @@
     font-weight: 800;
     text-transform: uppercase;
 
-    &.active {
+    &.active, &:hover {
       color: @primary !important;
+    }
+
+    &.menu-drop-down {
+      &:hover {
+        .DropDownMenu {
+          visibility: visible;
+        }
+      }
     }
 
     @media @phones {

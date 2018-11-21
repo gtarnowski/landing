@@ -1,6 +1,13 @@
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
 .App {
   display: grid;
   font-family: "Source Sans Pro", sans-serif;
+  align-content: stretch;
 }
 .App .container {
   width: 100%;

@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 import ToggleMenu from '../ToggleMenu';
 import BottomArrow from '../BottomArrow';
-
+import DropDownMenu from '../DropDownMenu';
 import content from '../../content/index';
 import './index.css';
 
@@ -69,9 +69,12 @@ class Navigation extends Component {
             <h2>{content.companyName}</h2>
           </div>
           <ul className="NavigationMenu" data-open={open}>
-            {menuItems.map(({ name, url }) => (
-              <a href="" onClick={e => this.onClick(e, url)} className={`menu-item ${activeSection === url && 'active'}`} key={name}>
+            {menuItems.map(({ name, url, children }) => (
+              <a href="" onClick={e => this.onClick(e, url)} className={`menu-item ${activeSection === url && 'active'} ${children && 'menu-drop-down'}`} key={name}>
                 <li>{name}</li>
+                {children && children.length > 0 && (
+                  <DropDownMenu items={children} />
+                )}
               </a>
             ))}
           </ul>

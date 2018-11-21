@@ -5,6 +5,7 @@ import Contact from '../components/Contact';
 
 export default {
   companyName: 'Tankmor',
+  companyHeader: 'Fuel & Gasoline Trailers for Rent',
   companyDescription: 'Some description about company',
   companyDetails: {
     email: 'rentals@tankmor.com',
@@ -15,7 +16,7 @@ export default {
       street: '531 Sheldon Rd',
       city: 'Channelview',
     },
-    phone: '+1 (832) 900 4246',
+    phone: '(832) 900 4246',
   },
   menuItems: [
     {
@@ -33,6 +34,13 @@ export default {
       name: 'Rentals',
       url: 'rentals',
       component: Rentals,
+      children: [
+        { name: 'Chemical Trailers', url: '/rentals/chemical-trailers/' },
+        { name: 'Food Grade Trailers', url: '/rentals/food-grade-trailers/' },
+        { name: 'Industrial Gas Trailers', url: '/rentals/industrial-gas-trailers/' },
+        { name: 'Gasoline Trailers', url: '/rentals/gasoline-trailers/' },
+        { name: 'Non Code Trailers', url: '/rentals/non-code-trailers/' },
+      ],
     },
     {
       name: 'Contact',
