@@ -1,30 +1,21 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
-// import React, {Component} from 'react'
-import './index.css'
+import './index.css';
 
-const DropDownMenu = ({ items, location: { pathname } }) => {
-  console.log('pathname', pathname)
-  return (
-    <div className="DropDownMenu">
-      {items.map(({ name, url }) => (
-        <Link to={url} key={url} className={url === pathname && 'active'}>
-          <li>{name}</li>
-        </Link>
-      ))}
-    </div>
-  )
-}
+const DropDownMenu = ({ items, location: { pathname } }) => (
+  <div className="DropDownMenu">
+    {items.map(({ name, url }) => (
+      <Link to={url} key={url} className={url === pathname ? 'active' : ' '} onClick={e => e.stopPropagation()}>
+        <li>{name}</li>
+      </Link>
+    ))}
+  </div>
+);
 
-// class Xxxx extends Component {
-//
-//   render() {
-//     return (
-//       <div>
-//
-//       </div>
-//     )
-//   }
-// }
+DropDownMenu.propTypes = {
+  items: PropTypes.array.isRequired,
+  location: PropTypes.object.isRequired,
+};
 
-export default withRouter(DropDownMenu)
+export default withRouter(DropDownMenu);

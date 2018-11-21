@@ -54,9 +54,9 @@ class Navigation extends Component {
   onClick = (e, url) => {
     e.preventDefault();
     const offsetTop = get(document.getElementById(url), 'offsetTop');
-    if (!offsetTop) return null;
+    if (!offsetTop || !url) return null;
 
-    window.scroll({
+    return window.scroll({
       behavior: 'smooth',
       left: 0,
       top: ((offsetTop - 53) || 0),
