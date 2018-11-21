@@ -8,8 +8,8 @@ import './index.css';
 const rentalItems = ['Item', 'Item2', 'Item3', 'Item4'];
 // const rentalItems = ['Item'];
 
-const Rentals = ({ name }) => (
-  <div className={name}>
+const Rentals = () => (
+  <div className="Rentals">
     <Title title="Rentals" />
     <div className="item-container">
       {content.categoryTiles.map(({ name }) => (
@@ -24,9 +24,11 @@ const Rentals = ({ name }) => (
       ))}
     </div>
 
-    <Link to="/rentals" className="Button">
-      View all
-    </Link>
+    <div className="button-row">
+      <Link to="/rentals" className="Button">
+        View all
+      </Link>
+    </div>
   </div>
 );
 

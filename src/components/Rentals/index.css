@@ -28,6 +28,15 @@
 }
 @media only screen and (min-width: 1400px) {
   .Rentals .item-container {
-    grid-template-columns: repeat(3, 500px);
+    grid-template-columns: repeat(3, 400px);
   }
+}
+.Rentals .button-row {
+  margin: 3em auto 1em auto;
+  text-align: center;
+}
+.Rentals .button-row .Button {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 1em 2em;
 }
