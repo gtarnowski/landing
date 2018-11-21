@@ -34,6 +34,12 @@
       img {
         height: 50px;
       }
+
+      @media @phones {
+        img {
+          height: 30px;
+        }
+      }
     }
   }
   &[data-fixed="true"] {
@@ -47,6 +53,14 @@
       img {
         height: 40px;
         filter: invert(100%);
+      }
+    }
+
+    @media @phones {
+      .Logo {
+        img {
+          height: 30px;
+        }
       }
     }
 

@@ -65,5 +65,5 @@ export default {
       component: Contact,
     },
   ],
-  categoryTiles: categories.map(({ name }) => ({ name })),
+  categoryTiles: categories.map(({ name, url }) => ({ name })),
 };

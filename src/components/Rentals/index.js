@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import Title from '../Title';
-import content from '../../content/index'
+import content, { categories } from '../../content/index'
 import OverlayBox from '../OverlayBox';
 import './index.css';
 
@@ -12,8 +12,9 @@ const Rentals = () => (
   <div className="Rentals">
     <Title title="Rentals" />
     <div className="item-container">
-      {content.categoryTiles.map(({ name }) => (
+      {categories.map(({ name, url }) => (
         <OverlayBox
+          url={url}
           boxClassName="RentalBox"
           key={name}
           imageURL="https://via.placeholder.com/300"

@@ -29,6 +29,11 @@
 .Navigation .navigation-container .Logo img {
   height: 50px;
 }
+@media only screen and (max-width: 599px) {
+  .Navigation .navigation-container .Logo img {
+    height: 30px;
+  }
+}
 .Navigation[data-fixed="true"] {
   padding-top: 0;
   padding-bottom: 0;
@@ -39,6 +44,11 @@
 .Navigation[data-fixed="true"] .Logo img {
   height: 40px;
   filter: invert(100%);
+}
+@media only screen and (max-width: 599px) {
+  .Navigation[data-fixed="true"] .Logo img {
+    height: 30px;
+  }
 }
 @media only screen and (min-width: 600px) {
   .Navigation[data-fixed="true"] .menu-item {

@@ -1,12 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 import Title from '../Title';
-import { withRouter } from 'react-router-dom'
+import NotFound from '../NotFound';
 import { categories } from '../../content';
-import './index.css'
+import './index.css';
 
 const RentalCategories = ({ location: { pathname } }) => {
-  const { name } = categories.find(({ url }) => url === pathname)
-  console.log(name)
+  const { name } = categories.find(({ url }) => url === pathname) || {};
+  if (!name) {
+    return <NotFound />;
+  }
+
   return (
     <div className="RentalCategories">
       <div className="title">
@@ -15,9 +19,8 @@ const RentalCategories = ({ location: { pathname } }) => {
 
       </div>
     </div>
-  )
-}
+  );
+};
 
 
-
-export default withRouter(RentalCategories)
+export default withRouter(RentalCategories);

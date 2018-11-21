@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import './index.css';
 
 const OverlayBox = ({
-  caption, captionHeader, imageURL, imageAlt, boxClassName,
+  caption, captionHeader, imageURL, imageAlt, boxClassName, url
 }) => {
   if (!caption || !imageAlt || !imageURL) return null;
 
   return (
-    <Link to={'#'} className={`OverlayBox ${boxClassName}`}>
+    <Link to={url} className={`OverlayBox ${boxClassName}`}>
       <img src={imageURL} alt={imageAlt} />
       <div className="box-caption">
         <div className="box-caption-content">
@@ -27,6 +27,7 @@ OverlayBox.propTypes = {
   captionHeader: PropTypes.string,
   imageAlt: PropTypes.string.isRequired,
   imageURL: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 export default OverlayBox;
