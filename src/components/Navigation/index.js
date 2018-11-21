@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import get from 'lodash/get'
+
+// Components
 import ToggleMenu from '../ToggleMenu';
 import BottomArrow from '../BottomArrow';
 import DropDownMenu from '../DropDownMenu';
+
+// Other
+import tankmorLogo from '../../content/Tankmor.png';
+import tankmorWhite from '../../content/tankmorWhite.png';
 import content from '../../content/index';
 import './index.css';
 
@@ -67,9 +73,9 @@ class Navigation extends Component {
     return (
       <div className="Navigation" data-fixed={fixed || isSubPage}>
         <div className="navigation-container wrapper">
-          <div className="Logo">
-            <h2>{content.companyName}</h2>
-          </div>
+          <Link className="Logo" to="/">
+            <img src={tankmorWhite} alt="Tankmor logo" />
+          </Link>
           <ul className="NavigationMenu" data-open={open}>
             {menuItems.map(({ name, url, children }) => children ? (
               <div onClick={e => this.onClick(e, url)} className={`menu-item ${activeSection === url && 'active'} ${children && 'menu-drop-down'}`} key={name}>

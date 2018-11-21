@@ -2,27 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8492b714-f181-4a60-a229-33978b27f45f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/content/categoryContent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/index.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DropDownMenu/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DropDownMenu/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DropDownMenu/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DropDownMenu/index.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DropDownMenu/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DropDownMenu/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DropDownMenu/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DropDownMenu/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/index.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RentalCategories/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RentalCategories/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RentalCategories/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RentalCategories/index.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RentalCategories/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RentalCategories/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RentalCategories/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RentalCategories/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Title/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Title/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Title/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Title/index.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Title/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Title/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/Tankmor white.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/tankmorWhite.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -106,23 +91,25 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/Navigation/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="70" column="12" lean-forward="true" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
+                <state relative-caret-position="595">
+                  <caret line="80" column="14" lean-forward="true" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
+                    <element signature="e#133#172#0" expanded="true" />
+                    <element signature="e#269#321#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/Rentals/index.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+                <state relative-caret-position="306">
+                  <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -143,16 +130,16 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/Navigation/index.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="89" column="21" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
+                <state relative-caret-position="748">
+                  <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/DropDownMenu/index.less">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="357">
@@ -236,10 +223,8 @@
         <option value="$PROJECT_DIR$/src/components/Footer/index.less" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/App/index.less" />
-        <option value="$PROJECT_DIR$/src/components/Navigation/index.js" />
         <option value="$PROJECT_DIR$/src/components/App/index.js" />
         <option value="$PROJECT_DIR$/src/components/DropDownMenu/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Navigation/index.less" />
         <option value="$PROJECT_DIR$/src/components/DropDownMenu/index.less" />
         <option value="$PROJECT_DIR$/src/components/Title/index.less" />
         <option value="$PROJECT_DIR$/src/components/Title/index.js" />
@@ -248,6 +233,8 @@
         <option value="$PROJECT_DIR$/src/content/categoryContent.js" />
         <option value="$PROJECT_DIR$/src/content/index.js" />
         <option value="$PROJECT_DIR$/src/components/Rentals/index.less" />
+        <option value="$PROJECT_DIR$/src/components/Navigation/index.less" />
+        <option value="$PROJECT_DIR$/src/components/Navigation/index.js" />
       </list>
     </option>
   </component>
@@ -493,15 +480,16 @@
       <workItem from="1542707325031" duration="6563000" />
       <workItem from="1542719926605" duration="11398000" />
       <workItem from="1542796530625" duration="3480000" />
-      <workItem from="1542805945210" duration="5697000" />
+      <workItem from="1542805945210" duration="6631000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82325000" />
+    <option name="totallyTimeSpent" value="83259000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3265" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14355895" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -836,20 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Navigation/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="89" column="21" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DropDownMenu/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Title/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -864,16 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="25" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Navigation/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="70" column="12" lean-forward="true" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -927,8 +891,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Rentals/index.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="306">
+          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DropDownMenu/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigation/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigation/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="80" column="14" lean-forward="true" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#133#172#0" expanded="true" />
+            <element signature="e#269#321#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

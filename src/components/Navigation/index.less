@@ -30,6 +30,10 @@
         letter-spacing: 1px;
         font-weight: 900;
       }
+
+      img {
+        height: 50px;
+      }
     }
   }
   &[data-fixed="true"] {
@@ -39,7 +43,12 @@
     background-color: @snowy;
     box-shadow: 0px -4px 15px #b1adad;
 
-
+    .Logo {
+      img {
+        height: 40px;
+        filter: invert(100%);
+      }
+    }
 
     @media @smartphones {
       .menu-item {
