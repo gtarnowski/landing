@@ -24,3 +24,14 @@
   font-size: 1.3em;
   color: #80868f;
 }
+.RentalCategories .content-wrapper {
+  padding: 10px;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+.RentalCategories .content-wrapper .rental-content p {
+  font-size: 1.1em;
+  padding: 3px;
+  text-align: left;
+  text-indent: 30px;
+}

@@ -6,7 +6,7 @@ import { categories } from '../../content';
 import './index.css';
 
 const RentalCategories = ({ location: { pathname } }) => {
-  const { name } = categories.find(({ url }) => url === pathname) || {};
+  const { name, content: ContentComponent } = categories.find(({ url }) => url === pathname) || {};
   if (!name) {
     return <NotFound />;
   }
@@ -16,7 +16,11 @@ const RentalCategories = ({ location: { pathname } }) => {
       <div className="title">
         <Title title={`${name} for Rent`} />
         <h2>View Tankmor's Available Inventory</h2>
-
+        <div className="content-wrapper">
+          {ContentComponent && (
+            <ContentComponent />
+          )}
+        </div>
       </div>
     </div>
   );

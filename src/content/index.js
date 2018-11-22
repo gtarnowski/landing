@@ -2,7 +2,9 @@ import Header from '../components/Header';
 import AboutUs from '../components/AboutUs';
 import Rentals from '../components/Rentals';
 import Contact from '../components/Contact';
-import { FuelTrailersContent } from './categoryContent'
+
+import { FuelTrailersContent } from './categoryContent';
+
 export const categories = [
   {
     name: 'Chemical Trailers',
@@ -10,15 +12,15 @@ export const categories = [
   },
   { name: 'Food Grade Trailers',
     url: '/rentals/food-grade-trailers/',
-
   },
   {
     name: 'Industrial Gas Trailers',
     url: '/rentals/industrial-gas-trailers/',
   },
   {
-    name: 'Gasoline Trailers',
+    name: 'Fuel Trailers',
     url: '/rentals/gasoline-trailers/',
+    content: FuelTrailersContent,
   },
   {
     name: 'Non Code Trailers',
@@ -65,5 +67,5 @@ export default {
       component: Contact,
     },
   ],
-  categoryTiles: categories.map(({ name, url }) => ({ name })),
+  categoryTiles: categories.map(({ name }) => ({ name })),
 };
