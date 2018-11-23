@@ -51,41 +51,38 @@ class Navigation extends Component {
 
   onToggleMenu = () => window.addEventListener('click', this.onOpen);
 
-  onClick = (e, url) => {
-    e.preventDefault();
-    const offsetTop = get(document.getElementById(url), 'offsetTop');
-    if (!offsetTop || !url) return null;
-
-    return window.scroll({
-      behavior: 'smooth',
-      left: 0,
-      top: ((offsetTop - 53) || 0),
-    });
-  }
+  onLogoClick = () => {
+    this.props.history.push('/');
+      window.scroll({
+          behavior: 'smooth',
+          left: 0,
+          top: 0,
+      });
+  };
 
   toggleButtonNode = React.createRef();
 
   render() {
-    const { activeSection, isSubPage } = this.props;
+    const { activeSection, isSubPage, onScrollToElement } = this.props;
     const { fixed, open } = this.state;
     const { menuItems } = content;
 
     return (
-      <div className="Navigation" data-fixed={fixed || isSubPage}>
+      <div className="Navigation" data-fixed={fixed || isSubPage} data-sub-page={isSubPage}>
         <div className="navigation-container wrapper">
-          <Link className="Logo" to="/">
+          <div className="Logo" onClick={this.onLogoClick}>
             <img src={tankmorWhite} alt="Tankmor logo" />
-          </Link>
+          </div>
           <ul className="NavigationMenu" data-open={open}>
             {menuItems.map(({ name, url, children }) => children ? (
-              <div onClick={e => this.onClick(e, url)} className={`menu-item ${activeSection === url && 'active'} ${children && 'menu-drop-down'}`} key={name}>
+              <div onClick={e => onScrollToElement(e, url)} className={`menu-item ${activeSection === url && 'active'} ${children && 'menu-drop-down'}`} key={name}>
                 <li>{name}</li>
                 {children && children.length > 0 && (
                   <DropDownMenu items={children} />
                 )}
               </div>
             ) : (
-              <a href="" onClick={e => this.onClick(e, url)} className={`menu-item ${activeSection === url && 'active'} ${children && 'menu-drop-down'}`} key={name}>
+              <a href="" onClick={e => onScrollToElement(e, url)} className={`menu-item ${activeSection === url && 'active'} ${children && 'menu-drop-down'}`} key={name}>
                 <li>{name}</li>
                 {children && children.length > 0 && (
                   <DropDownMenu items={children} />

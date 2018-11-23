@@ -2,11 +2,11 @@
   background-color: #ffffff;
   box-shadow: 0 3px 20px 0 rgba(128, 128, 128, 0.2);
   text-align: center;
-  padding: 1em 1em 2em 1em;
+  padding: 3em 1em 2em 1em;
 }
 @media only screen and (min-width: 1200px) {
   .Contact {
-    padding: 3em;
+    padding: 3em  ;
   }
 }
 .Contact .content {
@@ -22,10 +22,6 @@
 @media only screen and (min-width: 768px) {
   .Contact .content {
     grid-template-columns: 300px 350px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .Contact .content {
     justify-content: center;
   }
 }

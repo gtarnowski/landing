@@ -11,25 +11,26 @@ import Main from '../Main';
 
 import content from '../../content';
 import './index.css';
+import get from "lodash/get";
 
 class App extends Component {
   constructor() {
     super();
     this.componentsList = content.menuItems.map(({ url }) => url);
-    this.componentPositions = null;
     this.scrollOffset = 150;
     this.state = {
       activeSection: 'home',
     };
   }
 
-  componentWillMount() {
-    window.addEventListener('scroll', this.scrollEvent);
+  componentWillReceiveProps ({ location: { state } }) {
+    if (state) {
+      this.onScrollToElement(null, state.url, 'auto')
+    }
   }
 
-  componentDidMount() {
-    this.componentPositions = this.getComponentPositions();
-    this.forceUpdate();
+  componentWillMount() {
+    window.addEventListener('scroll', this.scrollEvent);
   }
 
   getComponentPositions = () => this.componentsList.map(name => {
@@ -60,12 +61,28 @@ class App extends Component {
     });
   }, 10);
 
+  onScrollToElement = (e, url, behavior = 'smooth') => {
+      e && e.preventDefault();
+      const offsetTop = get(document.getElementById(url), 'offsetTop');
+      console.log(offsetTop)
+      if ((offsetTop === undefined || offsetTop === null) || !url) {
+          this.props.history.push({ pathname: '/', state: { url } })
+      }
+
+      return window.scroll({
+          behavior,
+          left: 0,
+          top: ((offsetTop - 55) || 0),
+      });
+  }
+
   render() {
+    console.log(this.props)
     const { location: { pathname } } = this.props;
     const isSubPage = Boolean(pathname !== '/');
     return (
       <div className="App" data-sub-page={isSubPage}>
-        <Navigation activeSection={this.state.activeSection} isSubPage={isSubPage} />
+        <Navigation activeSection={this.state.activeSection} isSubPage={isSubPage} onScrollToElement={this.onScrollToElement}/>
         <Switch>
           <Route path="/" exact component={Main} />
           <Route path="/rentals" component={RentalCategories} />

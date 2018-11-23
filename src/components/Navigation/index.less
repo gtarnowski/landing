@@ -35,6 +35,10 @@
         height: 50px;
       }
 
+      &:hover {
+        cursor: pointer;
+      }
+
       @media @phones {
         img {
           height: 30px;
@@ -91,8 +95,8 @@
     }
   }
 
-  &[data-dark="true"] {
-    //background-color: @black;
+  &[data-sub-page="true"] {
+    position: relative;
   }
 }
 
@@ -103,6 +107,7 @@
   grid-template-columns: repeat(4, max-content);
 
   .menu-item {
+    cursor: pointer;
     font-size: 1.5em;
     text-decoration: none;
     color: @snowy;

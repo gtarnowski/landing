@@ -8,7 +8,7 @@
   position: absolute;
   margin-top: 15px;
   visibility: hidden;
-  margin-left: -30px !important;
+  margin-left: -30px;
 
   a {
     text-decoration: none;
@@ -25,4 +25,13 @@
     }
   }
 
+  @media @phones {
+    background-color: transparent;
+    position: relative;
+    visibility: visible;
+    max-width: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 0 ;
+  }
 }
