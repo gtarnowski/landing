@@ -23,6 +23,9 @@
   font-size: 1.3em;
   color: #80868f;
 }
+.RentalCategories .title a {
+  text-decoration: none;
+}
 .RentalCategories .content-wrapper {
   padding: 10px;
   max-width: 1000px;

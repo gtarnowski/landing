@@ -11,9 +11,9 @@ const ToggleMenu = React.forwardRef(({ fixed, onToggleMenu, open }, ref) => (
 ));
 
 ToggleMenu.propTypes = {
-  onToggleMenu: PropTypes.func.isRequired,
-  open: PropTypes.bool.isRequired,
-  fixed: PropTypes.bool.isRequired,
+  onToggleMenu: PropTypes.func,
+  open: PropTypes.bool,
+  fixed: PropTypes.bool,
 };
 
 export default ToggleMenu;

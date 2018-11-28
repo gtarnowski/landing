@@ -6,7 +6,7 @@ import './index.css';
 const DropDownMenu = ({ items, location: { pathname } }) => (
   <div className="DropDownMenu">
     {items.map(({ name, url }) => (
-      <Link to={url} key={url} className={url === pathname ? 'active' : ' '} onClick={e => e.stopPropagation()}>
+      <Link to={url} key={url} className={url === pathname ? 'active' : ' '}>
         <li>{name}</li>
       </Link>
     ))}

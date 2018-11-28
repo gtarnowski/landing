@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import get from 'lodash/get'
 
 // Components
 import ToggleMenu from '../ToggleMenu';
@@ -8,7 +7,6 @@ import BottomArrow from '../BottomArrow';
 import DropDownMenu from '../DropDownMenu';
 
 // Other
-import tankmorLogo from '../../content/Tankmor.png';
 import tankmorWhite from '../../content/tankmorWhite.png';
 import content from '../../content/index';
 import './index.css';
@@ -26,12 +24,12 @@ class Navigation extends Component {
 
   onScroll = () => {
     const offset = window.pageYOffset;
-    if (offset > 100) {
+    if (offset >= 100 && this.state.fixed === false) {
       this.setState({ fixed: true });
-    } else {
+    } else if (offset < 100 && this.state.fixed === true) {
       this.setState({ fixed: false });
     }
-  }
+  };
 
   onOpen = ({ target }) => {
     const { open } = this.state;
@@ -63,7 +61,7 @@ class Navigation extends Component {
   toggleButtonNode = React.createRef();
 
   render() {
-    const { activeSection, isSubPage, onScrollToElement } = this.props;
+    const { activeSection, isSubPage } = this.props;
     const { fixed, open } = this.state;
     const { menuItems } = content;
 
@@ -75,23 +73,27 @@ class Navigation extends Component {
           </div>
           <ul className="NavigationMenu" data-open={open}>
             {menuItems.map(({ name, url, children }) => children ? (
-              <div onClick={e => onScrollToElement(e, url)} className={`menu-item ${activeSection === url && 'active'} ${children && 'menu-drop-down'}`} key={name}>
+              <div className={`menu-item ${activeSection === url && 'active'} ${children && 'menu-drop-down'}`} key={name}>
                 <li>{name}</li>
                 {children && children.length > 0 && (
                   <DropDownMenu items={children} />
                 )}
               </div>
             ) : (
-              <a href="" onClick={e => onScrollToElement(e, url)} className={`menu-item ${activeSection === url && 'active'} ${children && 'menu-drop-down'}`} key={name}>
+              <Link
+                  to={`${url}`}
+                  className={`menu-item ${activeSection === url && 'active'} ${children && 'menu-drop-down'}`}
+                  key={name}
+              >
                 <li>{name}</li>
                 {children && children.length > 0 && (
                   <DropDownMenu items={children} />
                 )}
-              </a>
+              </Link>
             ))}
           </ul>
           <ToggleMenu
-            fixed={fixed}
+            fixed={fixed || isSubPage}
             open={open}
             onToggleMenu={this.onToggleMenu}
             ref={this.toggleButtonNode}
