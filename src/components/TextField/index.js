@@ -6,7 +6,7 @@ const TextField = ({ type, name }) => {
   const fieldName = name.toLowerCase();
   return (
     <div className="TextField">
-      <input type={type} id={fieldName} placeholder={name}/>
+      <input type={type} id={fieldName} placeholder={name} />
     </div>
   );
 };

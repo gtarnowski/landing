@@ -1,25 +1,24 @@
-import React, { Component } from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { withRouter, Link } from "react-router-dom";
 
 // Components
-import ToggleMenu from '../ToggleMenu';
-import BottomArrow from '../BottomArrow';
-import DropDownMenu from '../DropDownMenu';
+import ToggleMenu from "../ToggleMenu";
+import BottomArrow from "../BottomArrow";
+import DropDownMenu from "../DropDownMenu";
 
 // Other
-import tankmorWhite from '../../content/tankmorWhite.png';
-import content from '../../content/index';
-import './index.css';
-
+import tankmorWhite from "../../content/img/tankmorWhite.png";
+import content from "../../content/index";
+import "./index.css";
 
 class Navigation extends Component {
   state = {
     open: false,
-    fixed: false,
+    fixed: false
   };
 
   componentWillMount() {
-    window.addEventListener('scroll', this.onScroll);
+    window.addEventListener("scroll", this.onScroll);
   }
 
   onScroll = () => {
@@ -36,61 +35,76 @@ class Navigation extends Component {
     if (this.toggleButtonNode.current.contains(target)) {
       if (open) {
         this.setState({ open: false });
-        window.removeEventListener('click', this.onOpen);
+        window.removeEventListener("click", this.onOpen);
         return open;
       }
       this.setState({ open: true });
       return open;
     }
     this.setState({ open: false });
-    window.removeEventListener('click', this.onOpen);
+    window.removeEventListener("click", this.onOpen);
     return open;
   };
 
-  onToggleMenu = () => window.addEventListener('click', this.onOpen);
-
-  onLogoClick = () => {
-    this.props.history.push('/');
-      window.scroll({
-          behavior: 'smooth',
-          left: 0,
-          top: 0,
-      });
-  };
+  onToggleMenu = () => window.addEventListener("click", this.onOpen);
 
   toggleButtonNode = React.createRef();
 
+  isActive = url => {
+    const {
+      location: { pathname }
+    } = this.props;
+    if (!url) return false;
+    if (url === "/") {
+      return !!(url === pathname);
+    }
+    return !!pathname.match(url);
+  };
+
   render() {
-    const { activeSection, isSubPage } = this.props;
+    const {
+      isSubPage,
+      location: { pathname }
+    } = this.props;
     const { fixed, open } = this.state;
     const { menuItems } = content;
-
     return (
-      <div className="Navigation" data-fixed={fixed || isSubPage} data-sub-page={isSubPage}>
+      <div
+        className="Navigation"
+        data-fixed={fixed || isSubPage}
+        data-sub-page={isSubPage}
+      >
         <div className="navigation-container wrapper">
-          <div className="Logo" onClick={this.onLogoClick}>
+          <Link to={"/"} className="Logo">
             <img src={tankmorWhite} alt="Tankmor logo" />
-          </div>
+          </Link>
           <ul className="NavigationMenu" data-open={open}>
-            {menuItems.map(({ name, url, children }) => children ? (
-              <div className={`menu-item ${activeSection === url && 'active'} ${children && 'menu-drop-down'}`} key={name}>
-                <li>{name}</li>
-                {children && children.length > 0 && (
-                  <DropDownMenu items={children} />
-                )}
-              </div>
-            ) : (
-              <Link
-                  to={`${url}`}
-                  className={`menu-item ${activeSection === url && 'active'} ${children && 'menu-drop-down'}`}
-                  key={name}
-              >
-                <li>{name}</li>
-                {children && children.length > 0 && (
-                  <DropDownMenu items={children} />
-                )}
-              </Link>
-            ))}
+            {menuItems.map(
+              ({ name, url, children }) =>
+                children ? (
+                  <div
+                    className={`menu-item ${this.isActive(url) &&
+                      "active"} ${children && "menu-drop-down"}`}
+                    key={name}
+                  >
+                    <li>{name}</li>
+                    {children &&
+                      children.length > 0 && <DropDownMenu items={children} />}
+                  </div>
+                ) : (
+                  <Link
+                    to={`${url}`}
+                    className={`menu-item ${this.isActive(url) &&
+                      "active"} ${children && "menu-drop-down"}`}
+                    key={name}
+                  >
+                    <li>{name}</li>
+                    {console.log(pathname.match(url), url)}
+                    {children &&
+                      children.length > 0 && <DropDownMenu items={children} />}
+                  </Link>
+                )
+            )}
           </ul>
           <ToggleMenu
             fixed={fixed || isSubPage}

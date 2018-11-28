@@ -4,9 +4,7 @@ import './index.css';
 class Template extends Component {
   render() {
     return (
-      <div>
-
-      </div>
+      <div />
     );
   }
 }

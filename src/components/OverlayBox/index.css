@@ -5,20 +5,27 @@
   justify-items: center;
   align-items: center;
   cursor: pointer;
+  max-height: 300px;
 }
-.OverlayBox:hover .box-caption {
-  opacity: 1;
+.OverlayBox img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 .OverlayBox .box-caption {
   display: grid;
-  justify-content: center;
   align-content: center;
   width: 100%;
   height: 100%;
   transition: 0.2s ease-in-out;
-  background-color: rgba(23, 198, 113, 0.8);
-  opacity: 0;
+  background-color: rgba(23, 198, 113, 0.61);
   position: absolute;
+  grid-template-rows: 1fr max-content;
+}
+.OverlayBox .box-caption .box-caption-content {
+  padding: 20px;
+  align-self: center;
+  justify-self: center;
 }
 .OverlayBox .box-caption .box-caption-content * {
   color: #ffffff;
@@ -34,4 +41,37 @@
   margin-top: 7px;
   font-size: 1.2em;
   font-weight: 300;
+}
+.OverlayBox .box-caption .box-caption-content .icon {
+  text-align: center;
+  margin: 10px auto;
+  font-size: 4em;
+}
+.OverlayBox .box-caption:hover,
+.OverlayBox .box-caption:active {
+  background-color: rgba(23, 198, 113, 0.9);
+}
+@media only screen and (min-width: 1200px) {
+  .OverlayBox .box-caption {
+    opacity: 0;
+    background-color: rgba(23, 198, 113, 0.8);
+  }
+  .OverlayBox .box-caption:hover {
+    opacity: 1;
+  }
+}
+.OverlayBox .box-caption-actions {
+  text-align: center;
+}
+.OverlayBox .box-caption-actions .link-button {
+  font-family: 'Montserrat', sans-serif;
+  margin: 20px auto 20px auto;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.1em;
+  cursor: pointer;
 }

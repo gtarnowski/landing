@@ -47,4 +47,3 @@ class Form extends Component {
 }
 
 export default Form;
-

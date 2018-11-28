@@ -1,5 +1,8 @@
-import React, {Fragment, Component} from 'react';
-import SectionProvider from './SectionProvider';
+import React, { Fragment, Component } from 'react';
+import Header from './Header';
+import AboutUs from './AboutUs';
+import Rentals from './Rentals';
+import Contact from './Contact';
 import Map from './Map';
 import content from '../content/index';
 
@@ -7,9 +10,10 @@ class Main extends Component {
   render() {
     return (
       <Fragment>
-        {content.menuItems.map(menuComponent => (
-          <SectionProvider {...menuComponent} key={menuComponent.name} name={menuComponent.name.replace(/ /g, '')}/>
-        ))}
+        <Header />
+        <AboutUs />
+        <Rentals />
+        <Contact />
         <Map />
       </Fragment>
     );

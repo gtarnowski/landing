@@ -1,5 +1,5 @@
 import React from 'react';
-import content from '../../content/index'
+import content from '../../content/index';
 import './index.css';
 
 const Header = () => (

@@ -16,6 +16,13 @@
     padding: 3em;
   }
 }
+.RentalCategories .icon {
+  display: block;
+  text-align: center;
+  margin: 10px auto 30px auto;
+  font-size: 4em;
+  color: #17c671;
+}
 .RentalCategories .title {
   text-align: center;
 }

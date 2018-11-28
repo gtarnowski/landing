@@ -9,6 +9,7 @@ const FuelTrailersContent = () => (
     <p>Tankmor’s fuel trailers can also be outfitted with additional equipment per our customers’ needs including (1) 3 inch or 4 inch Pumps (used in some delivery services and in aviation fueling) (2) Scully Systems (used as an over fill protection for the tank) and (3) Vapor Recovery Systems (which are a safer, faster and cleaner way to load and unload the petroleum)</p>
     <p>Tankmor rentals and leasing specializes in petroleum and fuel tankers for it’s customers throughout the US.  We provide the highest level of carrier support to ensure that all equipment is ready and working when you’re contract needs it.</p>
   </div>
+
 );
 
 

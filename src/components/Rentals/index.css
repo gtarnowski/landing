@@ -16,19 +16,27 @@
   margin: 20px;
   background: #ffffff;
 }
+@media only screen and (max-width: 599px) {
+  .Rentals .item-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 300px);
+  }
+}
 @media only screen and (min-width: 600px) {
   .Rentals .item-container {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 300px);
   }
 }
 @media only screen and (min-width: 1200px) {
   .Rentals .item-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 1400px) {
   .Rentals .item-container {
     grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(2, 300px);
   }
 }
 .Rentals .button-row {
