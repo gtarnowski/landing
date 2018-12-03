@@ -45,17 +45,65 @@
   text-indent: 30px;
 }
 .RentalItems {
-  margin-top: 50px;
-  justify-content: center;
   display: grid;
-  grid-template-columns: repeat(4, 250px);
-  grid-gap: 10px;
+  grid-gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
 }
-.RentalItem {
+@media only screen and (max-width: 599px) {
+  .RentalItems {
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .RentalItems {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 900px) {
+  .RentalItems {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .RentalItems {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    margin: 50px auto;
+  }
+}
+.RentalListItem {
+  cursor: pointer;
   display: grid;
   grid-template-rows: repeat(2, max-content);
+  border: 1px solid #d5d5d5;
 }
-.RentalItem img {
-  height: 200px;
-  width: 250px;
+.RentalListItem img {
+  height: 250px;
+  object-fit: fill;
+  width: 100%;
+}
+.RentalListItem .details {
+  display: grid;
+  grid-gap: 8px;
+  padding: 12px;
+}
+.RentalListItem .details .title {
+  text-align: center;
+  display: inline;
+  font-weight: 600;
+}
+.RentalListItem .details .stock-price small {
+  font-weight: 300;
+}
+.RentalListItem .details .stock-price span {
+  font-weight: bold;
+  color: #17c671;
+}
+.RentalListItem .details .location {
+  font-weight: 300;
+  color: #80868f;
+}
+.RentalListItem:hover {
+  box-shadow: 0 3px 20px 0 rgba(128, 128, 128, 0.2);
 }

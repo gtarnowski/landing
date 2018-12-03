@@ -1,37 +1,35 @@
-import React from 'react';
-import { Query } from 'react-apollo'
-import listingQuery from '../../api/listingQuery'
-import content from '../../content'
-
-const variables = {
-  company: content.companyId,
-  filters: [],
-  page: 1,
-  sorting: "PRICE_ASC"
-}
+import React from "react";
+import { Query } from "react-apollo";
+import listingQuery from "../../api/listingQuery";
+import content from "../../content";
+import get from "lodash/get";
+import RentalListItem from "./RentalListItem";
 
 const RentalItems = ({ category }) => {
+  const variables = {
+    company: content.companyId,
+    filters: [],
+    page: 1,
+    sorting: "PRICE_ASC",
+    category
+  };
   return (
     <div className="RentalItems">
-      <Query
-        query={listingQuery}
-        variables={{ ...variables, category }}
-      >
-        {({ loading, data }) => {
-          console.log(data)
-          if (loading) return 'Loading......'
-          return data.listings.listings.map((listing, key) => <RentalItem {...listing} key={key} />)
-        }}
+      <Query query={listingQuery} variables={variables}>
+        {props => <ListingWrapper {...props} />}
       </Query>
     </div>
-  )
-}
+  );
+};
 
-const RentalItem = ({ title, leadPhoto, url }) => (
-  <div className="RentalItem" onClick={() => window.open(`https://lead.equipment${url}`, '_blank')}>
-      <img src={leadPhoto.url} alt=""/>
-      <h4>{title}</h4>
-  </div>
-)
+const ListingWrapper = ({ data, loading }) => {
+  const listings = get(data, "listings.listings");
+  if (loading) return "Loading......";
+  if (listings.length === 0) return "Sorry, Inventory is empty";
 
-export default RentalItems
+  return listings.map((listing, key) => (
+    <RentalListItem {...listing} key={key} />
+  ));
+};
+
+export default RentalItems;

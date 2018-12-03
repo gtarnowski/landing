@@ -44,6 +44,7 @@ export default gql`
           website
         }
         featured
+        stock
         state: field(name: "State / Providence") {
           value
         }

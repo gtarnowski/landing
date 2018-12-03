@@ -1,11 +1,10 @@
-@import '../../styles/media';
-@import '../../styles/colors';
+@import "../../styles/media";
+@import "../../styles/colors";
 
 @sub-page: #f7f7f7;
 
 .RentalCategories {
   background-color: @sub-page;
-
 
   @media @phones {
     padding: 2em;
@@ -18,7 +17,6 @@
   @media @desktops {
     padding: 3em;
   }
-
 
   .icon {
     display: block;
@@ -57,24 +55,73 @@
         }
       }
     }
-
   }
 }
 
 .RentalItems {
-  margin-top: 50px;
-  justify-content: center;
   display: grid;
-  grid-template-columns: repeat(4, 250px);
-  grid-gap: 10px;
+  grid-gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+
+  @media @phones {
+    margin: 0 auto;
+  }
+
+  @media @smartphones {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media @tablets-horizontal {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media @desktops {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    margin: 50px auto;
+  }
 }
 
-.RentalItem {
+.RentalListItem {
+  cursor: pointer;
   display: grid;
   grid-template-rows: repeat(2, max-content);
+  border: 1px solid #d5d5d5;
 
   img {
-    height: 200px;
-    width: 250px;
+    height: 250px;
+    object-fit: fill;
+    width: 100%;
+  }
+
+  .details {
+    display: grid;
+    grid-gap: 8px;
+    padding: 12px;
+
+    .title {
+      text-align: center;
+      display: inline;
+      font-weight: 600;
+    }
+
+    .stock-price {
+      small {
+        font-weight: 300;
+      }
+      span {
+        font-weight: bold;
+        color: @primary;
+      }
+    }
+    .location {
+      font-weight: 300;
+      color: @gray-dark;
+    }
+  }
+
+  &:hover {
+    box-shadow: @deep-fog;
   }
 }
