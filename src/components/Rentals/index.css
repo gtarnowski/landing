@@ -25,7 +25,7 @@
 @media only screen and (min-width: 600px) {
   .Rentals .item-container {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 300px);
+    grid-template-rows: repeat(3, 300px);
   }
 }
 @media only screen and (min-width: 1200px) {

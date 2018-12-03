@@ -23,6 +23,7 @@ export const categories = [
       "https://lead.equipment/company/tankmor/4/49/299/trailers/tanker-trailers/chemical-trailers",
     thumbnail: trailer1,
     icon: faFlask,
+    id: '299',
   },
   {
     name: "Food Grade Trailers",
@@ -31,6 +32,7 @@ export const categories = [
       "https://lead.equipment/company/tankmor/4/49/301/trailers/tanker-trailers/food-grade-trailers",
     thumbnail: trailer2,
     icon: faUtensils,
+    id: '301'
   },
   {
     name: "Industrial Gas Trailers",
@@ -39,6 +41,7 @@ export const categories = [
       "https://lead.equipment/company/tankmor/4/49/304/trailers/tanker-trailers/industrial-gas-trailers",
     thumbnail: trailer3,
     icon: faCogs,
+    id: '304'
   },
   {
     name: "Fuel Trailers",
@@ -48,6 +51,7 @@ export const categories = [
       "https://lead.equipment/company/tankmor/4/49/303/trailers/tanker-trailers/gasoline-trailers",
     thumbnail: trailer4,
     icon: faGasPump,
+    id: '303'
   },
   {
     name: "Non Code Trailers",
@@ -55,10 +59,12 @@ export const categories = [
     absoluteUrl: null,
     thumbnail: trailer2,
     icon: faBarcode,
+    id: '305'
   },
 ];
 
 export default {
+  companyId: '165',
   companyName: "Tankmor",
   companyHeader: "Fuel & Gasoline Trailers for Rent",
   companyDescription: "Liquid Tank Rental",

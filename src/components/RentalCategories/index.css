@@ -44,3 +44,18 @@
   text-align: left;
   text-indent: 30px;
 }
+.RentalItems {
+  margin-top: 50px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-gap: 10px;
+}
+.RentalItem {
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+}
+.RentalItem img {
+  height: 200px;
+  width: 250px;
+}
