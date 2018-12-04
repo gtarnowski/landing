@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './index.css';
 
 const ToggleMenu = React.forwardRef(({ fixed, onToggleMenu, open }, ref) => (
-  <button ref={ref} className="ToggleMenu" onClick={onToggleMenu} data-open={open} data-fixed={fixed}>
+  <button type="button" ref={ref} className="ToggleMenu" onClick={onToggleMenu} data-open={open} data-fixed={fixed}>
     <span className="bar-top" />
     <span className="bar-mid" />
     <span className="bar-bot" />

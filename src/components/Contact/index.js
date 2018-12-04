@@ -2,12 +2,15 @@ import React from 'react';
 
 import Title from '../Title';
 import Form from '../Form';
+import content from "../../content";
 import ContactIcons from './ContactIcons';
-import content from '../../content/index';
 import './index.css';
 
 const Contact = () => {
-  const { phone, fullAddress: { city, state } } = content.companyDetails;
+  const {
+    phone,
+    fullAddress: { city, state },
+  } = content.companyDetails;
   return (
     <div className="Contact">
       <Title title="Contact" />

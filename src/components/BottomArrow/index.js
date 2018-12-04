@@ -5,13 +5,14 @@ import faChevronUp from '@fortawesome/fontawesome-free-solid/faChevronUp';
 import './index.css';
 
 const BottomArrow = ({ fixed }) => {
-  const onClick = () => window.scroll({
-    behavior: 'smooth',
-    left: 0,
-    top: 0,
-  });
+  const onClick = () =>
+    window.scroll({
+      behavior: 'smooth',
+      left: 0,
+      top: 0,
+    });
   return (
-    <div className="BottomArrow" data-fixed={fixed} onClick={onClick}>
+    <div className="BottomArrow" data-fixed={fixed} onClick={onClick} role="button">
       <FontAwesomeIcon icon={faChevronUp} className="icon" />
     </div>
   );

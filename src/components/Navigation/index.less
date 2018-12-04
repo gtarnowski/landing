@@ -12,7 +12,6 @@
   display: grid;
   transition: 0.2s ease-in;
 
-
   .navigation-container {
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -46,7 +45,7 @@
       }
     }
   }
-  &[data-fixed="true"] {
+  &[data-fixed='true'] {
     padding-top: 0;
     padding-bottom: 0;
     color: @black;
@@ -82,7 +81,6 @@
         font-size: 1em;
       }
     }
-
   }
 
   @media @phones {
@@ -95,7 +93,7 @@
     }
   }
 
-  &[data-sub-page="true"] {
+  &[data-sub-page='true'] {
     position: relative;
   }
 }
@@ -115,7 +113,8 @@
     font-weight: 800;
     text-transform: uppercase;
 
-    &.active, &:hover {
+    &.active,
+    &:hover {
       color: @primary !important;
     }
 
@@ -134,7 +133,8 @@
       font-family: 'Montserrat', sans-serif;
       padding: 30px;
 
-      &:hover, &.active {
+      &:hover,
+      &.active {
         font-weight: 900;
         color: @snowy !important;
       }
@@ -156,7 +156,7 @@
     grid-template-rows: repeat(4, max-content);
     align-content: center;
 
-    &[data-open="true"] {
+    &[data-open='true'] {
       transform: translateX(0%);
     }
   }

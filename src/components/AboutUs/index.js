@@ -1,13 +1,13 @@
-import React from 'react';
-import faAllergies from '@fortawesome/fontawesome-free-solid/faAllergies';
-import faMapMarker from '@fortawesome/fontawesome-free-solid/faMapMarker';
-import faAddressBook from '@fortawesome/fontawesome-free-solid/faAddressBook';
-import faWifi from '@fortawesome/fontawesome-free-solid/faWifi';
+import React from "react";
+import faAllergies from "@fortawesome/fontawesome-free-solid/faAllergies";
+import faMapMarker from "@fortawesome/fontawesome-free-solid/faMapMarker";
+import faAddressBook from "@fortawesome/fontawesome-free-solid/faAddressBook";
+import faWifi from "@fortawesome/fontawesome-free-solid/faWifi";
 
 // Components
-import Title from '../Title';
-import Pictogram from '../Pictogram';
-import './index.css';
+import Title from "../Title";
+import Pictogram from "../Pictogram";
+import "./index.css";
 
 const AboutUs = () => (
   <div className="AboutUs">

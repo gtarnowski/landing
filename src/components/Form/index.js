@@ -7,38 +7,38 @@ const NAME = 'Name';
 const LAST_NAME = 'Last Name';
 const EMAIL = 'Email';
 const MESSAGE = 'Message';
-const DEFAULT_TEXTAREA_VALUE = 'Please contact with me';
 
 class Form extends Component {
+  state = {
+    name: '',
+    lastName: '',
+    email: '',
+    message: '',
+  };
+
+  onChange = ({ target: { value } }, fieldName) => this.setState({ [fieldName]: value });
+
   render() {
+    const { name, lastName, email, message } = this.state;
     return (
       <div className="Form">
         <form className="form-container">
           <div className="form-row">
-            <TextField
-              name={NAME}
-            />
+            <TextField name={NAME} onChange={this.onChange} value={name} />
           </div>
           <div className="form-row">
-            <TextField
-              name={LAST_NAME}
-            />
+            <TextField name={LAST_NAME} onChange={this.onChange} value={lastName} />
           </div>
           <div className="form-row">
-            <TextField
-              name={EMAIL}
-              type="email"
-            />
+            <TextField name={EMAIL} type="email" onChange={this.onChange} value={email} />
           </div>
           <div className="form-row">
-            <TextAreaField
-              name={MESSAGE}
-              rows={3}
-              cols={30}
-            />
+            <TextAreaField name={MESSAGE} rows={3} cols={30} onChange={this.onChange} value={message} />
           </div>
           <div className="form-row">
-            <button className="Button block">Send Now</button>
+            <button type="button" className="Button block">
+              Send Now
+            </button>
           </div>
         </form>
       </div>

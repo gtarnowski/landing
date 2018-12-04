@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import './index.css';
-import Contact from '../Contact'
-import Map from '../Map'
+import Contact from '../Contact';
+import Map from '../Map';
 
-const ContactPage = () => {
-  return (
-    <div className="ContactPage">
-      <Contact />
-      <Map />
-    </div>
-  );
-};
-
-
+const ContactPage = () => (
+  <div className="ContactPage">
+    <Contact />
+    <Map />
+  </div>
+);
 
 export default ContactPage;

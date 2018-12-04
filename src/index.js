@@ -1,16 +1,15 @@
-import 'babel-polyfill'
+import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { ApolloClient } from 'apollo-client'
-import { HttpLink } from 'apollo-link-http'
-import { InMemoryCache } from 'apollo-cache-inmemory'
-import { ApolloProvider } from 'react-apollo'
-import { ApolloLink, concat } from 'apollo-link'
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ApolloClient } from 'apollo-client';
+import { HttpLink } from 'apollo-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import { ApolloProvider } from 'react-apollo';
+import { ApolloLink, concat } from 'apollo-link';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import './styles/main.css';
-
 
 const authMiddleware = new ApolloLink((operation, forward) => {
   // add the authorization to the headers
@@ -29,12 +28,12 @@ const client = new ApolloClient({
 });
 window.apollo = client;
 
-
-ReactDOM.render((
+ReactDOM.render(
   <ApolloProvider client={client}>
     <Router>
-      <App/>
+      <App />
     </Router>
-  </ApolloProvider>
-), document.getElementById('root'));
+  </ApolloProvider>,
+  document.getElementById('root'),
+);
 serviceWorker.unregister();

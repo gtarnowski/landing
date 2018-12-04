@@ -9,7 +9,7 @@ const Footer = () => (
       {' '}
       <strong>{content.companyName}</strong>
       {' '}
-2018. All rights reserved.
+      2018. All rights reserved.
     </div>
   </div>
 );

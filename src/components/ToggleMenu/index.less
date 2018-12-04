@@ -11,11 +11,12 @@
   &:focus {
     outline-width: 0;
   }
+
   &:hover {
     cursor: pointer;
   }
 
-  [class*="bar-"] {
+  [class*='bar-'] {
     -ms-transform: rotate(0deg);
     -o-transition: 0.2s ease all;
     -webkit-transform: rotate(0deg);
@@ -34,7 +35,7 @@
     margin-bottom: 0;
   }
 
-  &[data-open="true"] {
+  &[data-open='true'] {
     .bar-top {
       -webkit-transform: rotate(45deg);
       -webkit-transform-origin: 15% 15%;
@@ -55,13 +56,14 @@
   }
 
   @media @phones {
-    &[data-fixed="true"] {
-      [class*="bar-"] {
+    &[data-fixed='true'] {
+      [class*='bar-'] {
         background-color: @black;
       }
     }
-    &[data-open="true"] {
-      [class*="bar-"] {
+
+    &[data-open='true'] {
+      [class*='bar-'] {
         background-color: @snowy;
       }
     }
