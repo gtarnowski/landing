@@ -4,7 +4,6 @@ import faCogs from '@fortawesome/fontawesome-free-solid/faCogs';
 import faGasPump from '@fortawesome/fontawesome-free-solid/faGasPump';
 import faBarcode from '@fortawesome/fontawesome-free-solid/faBarcode';
 import Header from '../components/Header';
-import AboutUs from '../components/AboutUs';
 import Rentals from '../components/Rentals';
 import Contact from '../components/Contact';
 
